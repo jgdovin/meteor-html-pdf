@@ -1,7 +1,7 @@
 Package.describe({
   name: "jgdovin:html-pdf",
   summary: "Meteor wrapper for the NPM html-pdf",
-  version: "0.1.0",
+  version: "0.1.1",
   git: "https://github.com/jgdovin/meteor-html-pdf"
 });
 
@@ -10,15 +10,23 @@ Npm.depends({
 });
 
 Package.onUse(function(api) {
+  api.use(['templating', 'mongo'], 'client');
+  api.use(['mongo'], 'server');
+  api.use('pfafman:filesaver@0.1.0');
+
   api.addFiles([
     'server/html-pdf.js',
   ], ['server']);
   api.addFiles([
-    'lib/index.js'
+    'client/subscription.js'
   ], ['client']);
+  api.addFiles([
+    'lib/index.js'
+  ], ['server', 'client']);
 
   api.export([
-    'pdf'
+    'pdf',
+    'PdfCollection'
   ]);
 });
 
