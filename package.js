@@ -10,6 +10,7 @@ Npm.depends({
 });
 
 Package.onUse(function(api) {
+  api.versionsFrom('1.0');
   api.use(['templating', 'mongo'], 'client');
   api.use(['mongo'], 'server');
   api.use('pfafman:filesaver@0.1.0');

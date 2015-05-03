@@ -8,6 +8,16 @@ Meteor wrapper for the NPM html-pdf
     meteor add jgdovin:html-pdf
 ```
 
+## Warning
+Currently the items under usage do not fully work, I have a work around for these for now as I continue to investigate issues with passing buffers between server and client
+
+For now you may call from the client:
+```
+Meteor.pdf.save('<h1>My Cool Pdf</h1>', 'myFileName');
+```
+
+this will process your pdf and automatically save the file to the client in a pdf file format.
+
 ## usage
 
 Either call asynchronous calls from the html-pdf library with the defined pdf variable. See the library here: https://www.npmjs.com/package/html-pdf
