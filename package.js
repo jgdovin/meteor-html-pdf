@@ -22,7 +22,8 @@ Package.onUse(function(api) {
     'client/subscription.js'
   ], ['client']);
   api.addFiles([
-    'lib/index.js'
+    'lib/index.js',
+    'lib/permissions.js'
   ], ['server', 'client']);
 
   api.export([
