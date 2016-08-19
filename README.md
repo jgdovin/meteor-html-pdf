@@ -13,10 +13,13 @@ Currently the items under usage do not fully work, I have a work around for thes
 
 For now you may call from the client:
 ```
-Meteor.pdf.save('<h1>My Cool Pdf</h1>', 'myFileName');
+Meteor.pdf.save('<h1>My Cool Pdf</h1>', 'myFileName', options);
 ```
 
-this will process your pdf and automatically save the file to the client in a pdf file format.
+this will process your pdf and automatically save the file to the client in a pdf file format. For ```options``` refer to https://www.npmjs.com/package/html-pdf, for example:
+```
+var options = { format: 'Letter' };
+```
 
 ## usage
 
